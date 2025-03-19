@@ -3,6 +3,8 @@ kind: NetworkPolicy
 metadata:
   name: hello-world
   namespace: test
+  labels:
+    app: hello-world
 spec:
   podSelector:
     matchLabels:

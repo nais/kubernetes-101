@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: hello-world
   namespace: test
+  labels:
+    app: hello-world
 spec:
   selector:
     app: hello-world

@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: hello-world
   namespace: test
+  labels:
+    app: hello-world
 spec:
   ingressClassName: nais-ingress-external
   rules:
