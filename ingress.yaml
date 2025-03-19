@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-world
+  namespace: test
+spec:
+  ingressClassName: nais-ingress-external
+  rules:
+  - host: "test-hello-world.external.dev.dev-nais.cloud.nais.io"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: hello-world
+            port:
+              number: 80
+
